@@ -26,3 +26,4 @@ follow the following in terminal at your application/ios folder:
 5) pod install
 6) flutter run
 
+<img src="https://github.com/shaunkani007/flutter-basic-news-ui/blob/main/ex1.png" width="100" height="100">
