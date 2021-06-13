@@ -1,6 +1,5 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
-import 'package:news_ui/data/news_list.dart';
 import 'package:news_ui/models/news.dart';
 
 class ImageContainer extends StatefulWidget {
@@ -28,7 +27,7 @@ class _ImageContainerState extends State<ImageContainer> {
           decoration: BoxDecoration(
             image: DecorationImage(
               image: widget.newsItem.image,
-              fit: BoxFit.fill,
+              fit: BoxFit.cover,
             ),
             borderRadius: BorderRadius.circular(40),
           ),
