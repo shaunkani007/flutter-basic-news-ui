@@ -2,6 +2,9 @@
 
 A news Flutter project.
 
+<img src="https://github.com/shaunkani007/flutter-basic-news-ui/blob/main/ex1.png" width="300" height="600">
+<img src="https://github.com/shaunkani007/flutter-basic-news-ui/blob/main/ex2.png" width="300" height="600">
+
 ## Getting Started
 
 To run this type following in the application folder:
