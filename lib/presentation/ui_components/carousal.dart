@@ -17,13 +17,14 @@ class Carousal extends StatelessWidget {
   Widget build(BuildContext context) {
     return CarouselSlider(
       options: CarouselOptions(
-          scrollDirection: Axis.vertical,
-          height: screenHeight,
-          viewportFraction: 1,
-          onPageChanged: (a, b) {
-            print(a);
-            print(b);
-          }),
+        scrollDirection: Axis.vertical,
+        height: screenHeight,
+        viewportFraction: 1,
+        // onPageChanged: (a, b) {
+        //   print(a);
+        //   print(b);
+        // },
+      ),
       items: newsList
           .map(
             (e) => Builder(

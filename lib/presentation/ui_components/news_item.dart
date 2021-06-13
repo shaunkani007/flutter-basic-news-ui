@@ -28,7 +28,7 @@ class NewsItem extends StatelessWidget {
         Spacer(),
         Text(
           newsItem.title,
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
         ),
         Spacer(),
         Padding(

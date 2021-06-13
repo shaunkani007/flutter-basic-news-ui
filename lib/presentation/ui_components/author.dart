@@ -31,7 +31,7 @@ class Author extends StatelessWidget {
           ),
         ),
         Text(
-          newsItem.title,
+          newsItem.author,
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 14,
