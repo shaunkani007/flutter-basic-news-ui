@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_ui/models/news.dart';
 
+import 'author.dart';
 import 'image_container.dart';
 
 class NewsItem extends StatelessWidget {
@@ -15,14 +16,19 @@ class NewsItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ImageContainer(
-          newsItem: newsItem,
-          height: height * 0.5,
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: ImageContainer(
+            newsItem: newsItem,
+            height: height * 0.3,
+          ),
         ),
+        Spacer(),
+        Author(height: height * 0.03, newsItem: newsItem),
         Spacer(),
         Text(
           newsItem.title,
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
         Spacer(),
         Padding(
@@ -31,11 +37,10 @@ class NewsItem extends StatelessWidget {
             newsItem.summary,
             style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
             textAlign: TextAlign.justify,
+            // overflow: TextOverflow.fade,
           ),
         ),
-        Spacer(
-          flex: 3,
-        )
+        Spacer()
       ],
     );
   }

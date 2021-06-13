@@ -1,5 +1,4 @@
 // @dart=2.9
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:news_ui/models/news.dart';
 
@@ -13,23 +12,36 @@ class ImageContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: CachedNetworkImage(
-        height: height,
-        fit: BoxFit.fitHeight,
-        imageUrl: newsItem.image,
-        progressIndicatorBuilder: (
-          context,
-          url,
-          downloadProgress,
-        ) =>
-            Center(
-          child: CircularProgressIndicator(
-            value: downloadProgress.progress,
+    return Stack(
+      alignment: Alignment.bottomLeft,
+      children: [
+        Container(
+          height: height,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: newsItem.image,
+              fit: BoxFit.fill,
+            ),
+            borderRadius: BorderRadius.circular(40),
           ),
         ),
-        errorWidget: (context, url, error) => Icon(Icons.error),
-      ),
+        // ),
+        Transform.translate(
+          offset: Offset(25, height * 0.1),
+          child: Container(
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.white,
+            ),
+            padding: EdgeInsets.all(8),
+            child: Icon(
+              Icons.bookmark_outline,
+              size: 50,
+              color: Colors.red,
+            ),
+          ),
+        )
+      ],
     );
   }
 }
