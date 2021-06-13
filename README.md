@@ -1,16 +1,28 @@
 # news_ui
 
-A new Flutter project.
+A news Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To run this type following in the application folder:
+$ flutter pub get
 
-A few resources to get you started if this is your first Flutter project:
+Check if simulator is running by:
+$ flutter devices
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+If using an android simulator simply do the following to run:
+Run app:
+$ flutter run
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+If using iOS simulator:
+follow the following in terminal at your application/ios folder:
+
+1) $ pod deintegrate
+2) $ sudo gem install cocoapods-clean
+3) $ pod clean
+   Open the project and delete (if it's still there) the “Pods” folder that should be red
+4) $ pod setup 
+  (This may take some time)
+5) pod install
+6) flutter run
+
